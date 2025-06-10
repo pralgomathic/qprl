@@ -239,47 +239,32 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-       <p>
-            The increasing deployment of autonomous systems in complex environments 
-            necessitates efficient communication and task completion among multiple agents. 
-          </p>
-          <p>
-            This paper presents <strong>SERN</strong> (Simulation-Enhanced Realistic Navigation), 
-            a novel framework integrating virtual and physical environments for real-time 
-            collaborative decision-making in multi-robot systems. SERN addresses key challenges 
-            in asset deployment and coordination through our bi-directional 
-            <strong>SERN ROS Bridge</strong> communication framework.
-          </p>
-          <p>
-            Our approach advances the state-of-the-art (SOTA) through:
-            <ul>
-              <li>Accurate real-world representation in virtual environments using Unity’s high-fidelity simulator.</li>
-              <li>Synchronization of physical and virtual robot movements.</li>
-              <li>Efficient ROS data distribution between remote locations.</li>
-              <li>Integration of SOTA semantic segmentation for enhanced environmental perception.</li>
-            </ul>
-          </p>
-          <p>
-            Additionally, we introduce a <strong>Multi-Metric Cost Function (MMCF)</strong> that dynamically balances 
-            latency, reliability, computational overhead, and bandwidth consumption to optimize 
-            system performance in contested environments.
-          </p>
-          <p>
-            We further provide theoretical justification for synchronization accuracy by proving 
-            that the positional error between physical and virtual robots remains bounded under 
-            varying network conditions.
-          </p>
-          <p>
-            Our evaluations show a <strong>15% to 24% improvement</strong> in latency and up to a 
-            <strong>15% increase</strong> in processing efficiency compared to traditional ROS setups. 
-            Real-world and virtual simulation experiments with multiple robots 
-            (<em>Clearpath Jackal and Husky</em>) demonstrate synchronization accuracy, achieving 
-            less than <strong>5 cm</strong> positional error and under <strong>2°</strong> rotational error.
-          </p>
-          <p>
-            These results highlight SERN's potential to enhance situational awareness and 
-            multi-agent coordination in diverse, contested environments.
-          </p>
+         <p>
+    Reinforcement learning (RL) in real-world tasks such as robotic navigation often encounters environments with
+    <strong>asymmetric traversal costs</strong>, where actions like climbing uphill versus moving downhill incur distinctly different penalties,
+    or transitions may become irreversible.
+  </p>
+
+  <p>
+    While recent <em>quasimetric RL</em> methods relax symmetry assumptions, they typically do not explicitly account for
+    <strong>path-dependent costs</strong> or provide rigorous <strong>safety guarantees</strong>.
+  </p>
+
+  <p>
+    We introduce <strong>Quasi-Potential Reinforcement Learning (QPRL)</strong>, a novel framework that explicitly decomposes asymmetric traversal costs into a
+    <em>path-independent potential function</em> \( \Phi \) and a <em>path-dependent residual</em> \( \Psi \).
+    This decomposition allows efficient learning and stable policy optimization via a <strong>Lyapunov-based safety mechanism</strong>.
+  </p>
+
+  <p>
+    <strong>Theoretically</strong>, we prove that QPRL achieves convergence with improved sample complexity of \( \tilde{O}(\sqrt{T}) \),
+    surpassing prior quasimetric RL bounds of \( \tilde{O}(T) \).
+  </p>
+
+  <p>
+    <strong>Empirically</strong>, our experiments demonstrate that QPRL attains state-of-the-art performance across various navigation and control tasks,
+    significantly reducing irreversible constraint violations by approximately <strong>4×</strong> compared to baselines.
+  </p>
         
         </div>
       </div>
@@ -340,14 +325,15 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{hossain2025sern,
-  author       = {Hossain, Jumman and Dey, Emon and Chugh, Snehalraj and Ahmed, Masud and Anwar, M. S. and Faridee, Abu-Zaher and Hoppes, Jason and Trout, Theron and Basak, Anjon and Chowdhury, Rafidh and Mistry, Rishabh and Kim, Hyun and Freeman, Jade and Suri, Niranjan and Raglin, Adrienne and Busart, Carl and Gregory, Timothy and Ravi, Anuradha and Roy, Nirmalya},
-  title        = {SERN: Simulation-Enhanced Realistic Navigation for Multi-Agent Robotic Systems in Contested Environments},
-  year         = {2025},
-  eprint       = {2410.16686},
-  archivePrefix= {arXiv},
-  primaryClass = {cs.RO},
-  url          = {https://arxiv.org/abs/2410.16686}
+    <pre><code>
+      @InProceedings{hossain2025qprl,
+  title     = {{QPRL}: Learning Optimal Policies with Quasi-Potential Functions for Asymmetric Traversal},
+  author    = {Jumman Hossain and Nirmalya Roy},
+  booktitle = {Proceedings of the 42nd International Conference on Machine Learning},
+  series    = {Proceedings of Machine Learning Research},
+  publisher = {PMLR},
+  year      = {2025}
+}
 }</code></pre>
   </div>
 </section>
