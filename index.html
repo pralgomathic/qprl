@@ -304,8 +304,7 @@
     <h2 class="title is-3">QPRL Framework</h2>
     <div class="content">
       <p class="has-text-centered is-size-6">
-      <strong>QPRL Framework:</strong>
-      Decomposes asymmetric costs into path-independent potential \( \Phi \) and path-dependent residual \( \Psi \).
+      <strong>QPRL</strong> decomposes asymmetric costs into path-independent potential \( \Phi \) and path-dependent residual \( \Psi \).
       Integrates Lyapunov safety constraints <span style="color:goldenrod;">(yellow)</span> for stable exploration.
       </p>
 
@@ -521,6 +520,17 @@
 </p>
 
       </div>
+
+      <figure class="image is-4by3 has-text-centered" style="margin-top: 2rem;">
+  <img src="static/images/qprl_performance_plot_updated_v5.png" alt="QPRL performance learning curves">
+</figure>
+
+<p class="has-text-centered is-size-6">
+  <strong>Sample-efficiency and stability across tasks.</strong><br>
+  Success-rate learning curves for all five asymmetric environments.<br>
+  The \( x \)-axis shows <em>environment interactions</em> (in millions of steps); the \( y \)-axis shows mean <em>success rate</em>.<br>
+  Solid lines are the mean over <strong>5 random seeds</strong>; shaded bands denote \( \pm 1 \) standard deviation.
+</p>
 
     </div>
   </div>
